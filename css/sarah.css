@@ -5519,7 +5519,7 @@ body {
   background-color: #8F3926;
   color: #ffffff;
   display: block;
-  padding: 2rem 0;
+  padding: 1.8rem 0 2rem 0;
   padding-left: 16.25vw;
   padding-right: calc(100vw / 24 * 3.95); }
   @media screen and (max-width: 768px) {
@@ -5543,9 +5543,10 @@ body {
 
 .get-in-touch h4 {
   color: #ffffff;
-  font-size: 0.8rem; }
+  font-size: 0.7rem; }
   @media screen and (max-width: 768px) {
     .get-in-touch h4 {
+      margin-top: 4px;
       width: 100px;
       float: left;
       text-align: left; } }
