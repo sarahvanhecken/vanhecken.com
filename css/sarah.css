@@ -5243,7 +5243,7 @@ body {
   position: relative;
   font-family: 'Overpass', sans-serif;
   letter-spacing: 0.05em;
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: bold;
   height: 16.666vw;
   background-color: #AF3318;
@@ -5486,9 +5486,8 @@ body {
 
 .header .logo-bar {
   width: 20.8333vw;
-  height: 9px;
   position: absolute;
-  bottom: -9px;
+  bottom: -18px;
   left: 0; }
   .header .logo-bar p {
     width: 100%;
