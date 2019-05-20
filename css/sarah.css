@@ -5343,11 +5343,12 @@ body {
         min-height: 380px; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
-          min-height: 350px;
+          min-height: 320px;
           padding: 4vh 1.4vh;
           font-size: 1rem; } }
       @media screen and (min-width: 1088px) {
         .experience-overlay-block .cv-list-small li {
+          min-height: 360px;
           padding: 6vh 2.7vh;
           font-size: 1.2rem; } }
       .experience-overlay-block .cv-list-small li .yellow-circle {
