@@ -5348,11 +5348,11 @@ body {
         position: relative; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
-          padding: 1.5vh 1.4vh;
+          padding: 4vh 1.4vh;
           font-size: 1rem; } }
       @media screen and (min-width: 1088px) {
         .experience-overlay-block .cv-list-small li {
-          padding: 2vh 2.7vh;
+          padding: 6vh 2.7vh;
           font-size: 1.2rem; } }
       .experience-overlay-block .cv-list-small li .yellow-circle {
         height: 16px;
