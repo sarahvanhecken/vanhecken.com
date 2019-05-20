@@ -5543,12 +5543,15 @@ body {
 
 .get-in-touch h4 {
   color: #ffffff;
-  font-size: 0.9rem; }
+  font-size: 0.8rem; }
   @media screen and (max-width: 768px) {
     .get-in-touch h4 {
       width: 100px;
       float: left;
       text-align: left; } }
+  @media screen and (min-width: 769px), print {
+    .get-in-touch h4 {
+      font-size: 0.9rem; } }
 
 @media screen and (max-width: 768px) {
   .get-in-touch ul {
