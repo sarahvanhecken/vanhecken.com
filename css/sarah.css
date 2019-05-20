@@ -1,3 +1,11 @@
+::selection {
+  background: #151516;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #151516;
+  /* Gecko Browsers */ }
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
