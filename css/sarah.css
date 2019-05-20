@@ -5343,7 +5343,7 @@ body {
         min-height: 380px; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
-          min-height: 320px;
+          min-height: 350px;
           padding: 4vh 1.4vh;
           font-size: 1rem; } }
       @media screen and (min-width: 1088px) {
