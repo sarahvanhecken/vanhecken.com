@@ -5328,7 +5328,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    margin-top: 80vh;
+    margin-top: 90vh;
     text-align: center; }
     @media screen and (min-width: 769px), print {
       .experience-overlay-block .cv-list-small {
@@ -5360,8 +5360,7 @@ body {
         background-color: #EF7E16;
         border-radius: 50%;
         display: inline-block;
-        margin-top: 15px;
-        margin-left: 3px; }
+        margin-top: 15px; }
         @media screen and (min-width: 769px), print {
           .experience-overlay-block .cv-list-small li .yellow-circle {
             margin-left: 0px;
