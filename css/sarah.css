@@ -5328,7 +5328,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    margin-top: 90vh;
+    margin-top: 80vh;
     text-align: center; }
     @media screen and (min-width: 769px), print {
       .experience-overlay-block .cv-list-small {
@@ -5337,7 +5337,7 @@ body {
       font-family: 'Ubuntu Mono', monospace;
       display: table-cell;
       letter-spacing: 0.05em;
-      padding: 20px 2px 5px 2px;
+      padding: 20px 5px 5px 5px;
       font-size: 0.8rem;
       min-height: 200px;
       text-align: center; }
@@ -5360,9 +5360,14 @@ body {
         background-color: #EF7E16;
         border-radius: 50%;
         display: inline-block;
-        margin-top: 15px; }
+        margin-top: 14px;
+        position: absolute;
+        bottom: -12px;
+        left: 5px; }
         @media screen and (min-width: 769px), print {
           .experience-overlay-block .cv-list-small li .yellow-circle {
+            position: static;
+            margin-top: 21px;
             height: 20px;
             width: 20px; } }
         @media screen and (min-width: 1088px) {
