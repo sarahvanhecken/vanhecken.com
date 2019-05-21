@@ -5561,7 +5561,7 @@ body {
       text-align: left; } }
   @media screen and (min-width: 769px), print {
     .get-in-touch h4 {
-      font-size: 0.9rem; } }
+      font-size: 0.8rem; } }
 
 @media screen and (max-width: 768px) {
   .get-in-touch ul {
@@ -5632,6 +5632,9 @@ body {
     .subheader .experience-block .content h4 {
       color: #151516;
       font-size: 0.7rem; }
+      @media screen and (min-width: 769px), print {
+        .subheader .experience-block .content h4 {
+          font-size: 0.8rem; } }
     @media screen and (min-width: 769px), print {
       .subheader .experience-block .content {
         font-size: 0.9rem;
