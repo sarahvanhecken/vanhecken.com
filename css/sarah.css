@@ -5719,7 +5719,7 @@ body {
 .projects {
   margin-left: 16.25vw;
   margin-right: 12.29vw;
-  margin-bottom: 10rem; }
+  margin-bottom: 7rem; }
   @media screen and (min-width: 769px), print {
     .projects {
       margin-left: 12.29vw;
@@ -5786,7 +5786,7 @@ body {
 .media-item-content {
   letter-spacing: 0.05em; }
   .media-item-content p {
-    margin-bottom: 3.5rem; }
+    margin-bottom: 2.5rem; }
   .media-item-content a {
     color: #ffffff;
     font-family: 'Ubuntu Mono', monospace;
@@ -5811,6 +5811,18 @@ body {
         clear: both;
         content: " ";
         display: table; } }
+
+.media-item-mobile-bar {
+  width: 100%;
+  margin-top: 2.2rem; }
+  .media-item-mobile-bar p {
+    width: 100%;
+    border-bottom: 2px solid #EF7E16;
+    height: 6px; }
+    .media-item-mobile-bar p::after {
+      clear: both;
+      content: " ";
+      display: table; }
 
 .footer {
   margin: 10rem 0 0 0; }
