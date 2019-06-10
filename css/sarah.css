@@ -5361,7 +5361,7 @@ body {
       .experience-overlay-block .cv-list-small li .yellow-circle {
         height: 16px;
         width: 16px;
-        background-color: #EF7E16;
+        background-color: #8FD8E9;
         border-radius: 50%;
         display: inline-block;
         margin-top: 14px;
@@ -5504,7 +5504,8 @@ body {
   width: 20.8333vw;
   position: absolute;
   bottom: -10px;
-  left: 0; }
+  left: 0;
+  cursor: pointer; }
   .header .logo-bar p {
     width: 100%;
     border-bottom: 2px solid #EF7E16;

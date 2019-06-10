@@ -3,7 +3,7 @@ if (!("ontouchstart" in document.documentElement)) {
   document.documentElement.className += "no-touch";
 }
 
-// Toggle CV bar via 
+// Toggle CV bar via click
 let el = document.querySelector('.experience-overlay-block');
 el.onclick = function() {
   el.classList.toggle('experience-overlay-block-toggled-active');
