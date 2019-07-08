@@ -5411,7 +5411,8 @@ body {
     .cv-list-big {
       top: 17rem;
       width: 17.5vw; } }
-  .cv-list-big .h3, .cv-list-big .h4 {
+  .cv-list-big .h3,
+  .cv-list-big .h4 {
     font-size: 0.8rem;
     color: #8FD8E9;
     text-transform: uppercase;
@@ -5696,7 +5697,7 @@ body {
       margin-left: 12.29vw;
       margin-right: 0;
       margin-top: 8rem;
-      margin-bottom: 12rem; } }
+      margin-bottom: 10rem; } }
 
 .about .columns .column p {
   margin-bottom: 1rem; }
@@ -5711,10 +5712,14 @@ body {
   line-height: 84px;
   letter-spacing: 0.05em;
   margin-bottom: 2.5rem; }
+  @media screen and (min-width: 769px), print {
+    .about h2 {
+      font-size: 5.2rem;
+      margin-bottom: 4rem; } }
 
 @media screen and (min-width: 769px), print {
   .about .sarah-photo {
-    margin-top: -5rem; } }
+    margin-top: -8rem; } }
 
 .about .sarah-photo img {
   opacity: 0.8; }
@@ -5734,7 +5739,11 @@ body {
   font-size: 4.1rem;
   line-height: 84px;
   letter-spacing: 0.05em;
-  margin-bottom: 3.5rem; }
+  margin-bottom: 2.5rem; }
+  @media screen and (min-width: 769px), print {
+    .projects h2 {
+      font-size: 5.2rem;
+      margin-bottom: 5.5rem; } }
 
 .more {
   margin-left: 16.25vw;
@@ -5750,6 +5759,10 @@ body {
   letter-spacing: 0.05em;
   margin-bottom: 3.5rem;
   color: #8FD8E9; }
+  @media screen and (min-width: 769px), print {
+    .more h2 {
+      font-size: 5.2rem;
+      margin-bottom: 4rem; } }
 
 .media-item {
   margin-bottom: 3rem; }
@@ -5960,7 +5973,8 @@ body {
   height: 25px;
   cursor: pointer; }
 
-.close-overlay:before, .close-overlay:after {
+.close-overlay:before,
+.close-overlay:after {
   position: absolute;
   left: 15px;
   content: ' ';
