@@ -5328,37 +5328,34 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    margin-top: 80vh;
-    text-align: center; }
+    margin-top: 300px;
+    max-height: 100vh; }
     @media screen and (min-width: 769px), print {
       .experience-overlay-block .cv-list-small {
         margin-top: 50vh; } }
+    @media screen and (min-width: 1088px) {
+      .experience-overlay-block .cv-list-small {
+        margin-top: 45vh; } }
     .experience-overlay-block .cv-list-small li {
       font-family: 'Ubuntu Mono', monospace;
       display: table-cell;
       letter-spacing: 0.05em;
-      padding: 20px 5px 5px 5px;
+      padding: 20px 6px 5px 4px;
       font-size: 0.8rem;
-      min-height: 170px;
+      min-height: 260px;
       text-align: center; }
       .experience-overlay-block .cv-list-small li:first-child {
-        min-height: 260px; }
+        min-height: 350px; }
       .experience-overlay-block .cv-list-small li:last-child {
-        min-height: 250px;
+        min-height: 290px;
         position: relative; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
-          min-height: 250px;
           padding: 4vh 1.4vh;
-          font-size: 1rem; }
-          .experience-overlay-block .cv-list-small li:first-child {
-            min-height: 390px; }
-          .experience-overlay-block .cv-list-small li:last-child {
-            min-height: 360px;
-            position: relative; } }
+          font-size: 1rem; } }
       @media screen and (min-width: 1088px) {
         .experience-overlay-block .cv-list-small li {
-          padding: 6vh 2.7vh;
+          padding: 4vh 2.7vh 4vh 2.4vh;
           font-size: 1.2rem; } }
       .experience-overlay-block .cv-list-small li .yellow-circle {
         height: 16px;
