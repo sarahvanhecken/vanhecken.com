@@ -5342,13 +5342,19 @@ body {
       letter-spacing: 0.05em;
       padding: 20px 6px 5px 4px;
       font-size: 0.8rem;
-      min-height: 260px;
+      min-height: 230px;
       text-align: center; }
       .experience-overlay-block .cv-list-small li:first-child {
         min-height: 350px; }
       .experience-overlay-block .cv-list-small li:last-child {
         min-height: 290px;
         position: relative; }
+        @media screen and (min-width: 769px), print {
+          .experience-overlay-block .cv-list-small li:last-child {
+            margin-top: 330px; } }
+        @media screen and (min-width: 1088px) {
+          .experience-overlay-block .cv-list-small li:last-child {
+            min-height: 360px; } }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
           padding: 4vh 1.4vh;
