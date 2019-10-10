@@ -5533,7 +5533,6 @@ body {
 .get-in-touch h4 {
   font-family: 'Overpass', sans-serif;
   color: #151516;
-  font-weight: bold;
   font-size: 0.8rem; }
   @media screen and (max-width: 768px) {
     .get-in-touch h4 {
@@ -5620,10 +5619,41 @@ body {
         margin-right: 1rem; } }
   .portfolio .columns a {
     display: block;
+    position: relative;
     height: auto;
-    margin-bottom: 1rem; }
-  .portfolio .columns img {
-    max-width: 100%; }
+    margin-bottom: 1rem;
+    padding: 0; }
+    .portfolio .columns a img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover; }
+    .portfolio .columns a:after, .portfolio .columns a:before {
+      position: absolute;
+      opacity: 0;
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s; }
+    .portfolio .columns a:after {
+      content: '\A';
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6); }
+    .portfolio .columns a:before {
+      content: attr(data-content);
+      width: 100%;
+      color: #fff;
+      z-index: 1;
+      padding: 0;
+      font-family: 'Ubuntu Mono', monospace;
+      font-size: 1.3rem;
+      top: 47%;
+      text-align: center; }
+    .portfolio .columns a:hover:after, .portfolio .columns a:hover:before {
+      opacity: 1; }
 
 .footer {
   margin: 10rem 0 0 0; }
