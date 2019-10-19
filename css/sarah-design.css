@@ -5328,12 +5328,12 @@ body {
       letter-spacing: 0.05em;
       padding: 20px 6px 5px 4px;
       font-size: 0.8rem;
-      min-height: 230px;
+      min-height: 180px;
       text-align: center; }
       .experience-overlay-block .cv-list-small li:first-child {
         min-height: 280px; }
       .experience-overlay-block .cv-list-small li:last-child {
-        min-height: 290px;
+        min-height: 240px;
         position: relative; }
         @media screen and (min-width: 769px), print {
           .experience-overlay-block .cv-list-small li:last-child {
