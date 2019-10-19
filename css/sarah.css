@@ -5345,9 +5345,9 @@ body {
       min-height: 230px;
       text-align: center; }
       .experience-overlay-block .cv-list-small li:first-child {
-        min-height: 350px; }
+        min-height: 280px; }
       .experience-overlay-block .cv-list-small li:last-child {
-        min-height: 290px;
+        min-height: 280px;
         position: relative; }
         @media screen and (min-width: 769px), print {
           .experience-overlay-block .cv-list-small li:last-child {
