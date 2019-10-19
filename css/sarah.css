@@ -5494,9 +5494,14 @@ body {
     .header .column.is-5 {
       min-height: 37.5vw; } }
 
+@media screen and (max-width: 768px) {
+  .header .column.grey-bg {
+    margin-bottom: 1rem; } }
+
 @media screen and (min-width: 769px), print {
   .header .column.grey-bg {
-    order: 2; } }
+    order: 2;
+    margin-bottom: 0rem; } }
 
 .header .column.green-bg {
   background-color: #AF3318;
@@ -5578,7 +5583,7 @@ body {
 .get-in-touch ul li {
   display: block;
   text-align: right;
-  margin-bottom: 1rem; }
+  margin-bottom: 0.5rem; }
   @media screen and (min-width: 769px), print {
     .get-in-touch ul li {
       margin-top: 0.9rem;
