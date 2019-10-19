@@ -5867,6 +5867,9 @@ body {
   .footer .column.grey-bg p {
     letter-spacing: 0.05em;
     font-size: 0.8rem; }
+    .footer .column.grey-bg p a {
+      text-decoration: underline;
+      color: #ffffff; }
 
 .footer .column.green-bg {
   background-color: #8FD8E9;
