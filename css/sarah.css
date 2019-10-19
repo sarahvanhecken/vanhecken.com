@@ -5346,6 +5346,9 @@ body {
       text-align: center; }
       .experience-overlay-block .cv-list-small li:first-child {
         min-height: 280px; }
+        @media screen and (min-width: 769px), print {
+          .experience-overlay-block .cv-list-small li:first-child {
+            min-height: 330px; } }
       .experience-overlay-block .cv-list-small li:last-child {
         min-height: 240px;
         position: relative; }
@@ -5357,6 +5360,7 @@ body {
             min-height: 360px; } }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
+          min-height: 220px;
           padding: 4vh 1.4vh;
           font-size: 1rem; } }
       @media screen and (min-width: 1088px) {
