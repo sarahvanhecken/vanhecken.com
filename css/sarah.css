@@ -5348,13 +5348,13 @@ body {
         min-height: 280px; }
         @media screen and (min-width: 769px), print {
           .experience-overlay-block .cv-list-small li:first-child {
-            min-height: 330px; } }
+            min-height: 350px; } }
       .experience-overlay-block .cv-list-small li:last-child {
         min-height: 240px;
         position: relative; }
         @media screen and (min-width: 769px), print {
           .experience-overlay-block .cv-list-small li:last-child {
-            margin-top: 330px; } }
+            min-height: 320px; } }
         @media screen and (min-width: 1088px) {
           .experience-overlay-block .cv-list-small li:last-child {
             min-height: 360px; } }
