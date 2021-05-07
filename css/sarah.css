@@ -5328,7 +5328,7 @@ body {
     margin: 0;
     padding: 0;
     position: fixed;
-    left: 2px;
+    left: .5vw;
     top: 165px; }
     @media screen and (min-width: 750px), print {
       .experience-overlay-block .cv-list-small {
