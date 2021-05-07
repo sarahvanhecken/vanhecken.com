@@ -5325,48 +5325,46 @@ body {
     writing-mode: tb-rl;
     transform: rotate(-180deg);
     color: #ffffff;
-    height: 100%;
     margin: 0;
     padding: 0;
-    margin-top: 380px;
-    max-height: 100vh; }
+    position: fixed;
+    left: 2px;
+    top: 165px; }
+    @media screen and (min-width: 750px), print {
+      .experience-overlay-block .cv-list-small {
+        left: 2.2vw;
+        top: 200px; } }
     @media screen and (min-width: 769px), print {
       .experience-overlay-block .cv-list-small {
-        margin-top: 50vh; } }
+        left: .5vw;
+        top: 240px; } }
     @media screen and (min-width: 1088px) {
       .experience-overlay-block .cv-list-small {
-        margin-top: 45vh; } }
+        left: .75vw;
+        top: 310px; } }
+    @media screen and (min-width: 1480px) {
+      .experience-overlay-block .cv-list-small {
+        left: 1.1vw;
+        top: 430px; } }
     .experience-overlay-block .cv-list-small li {
       font-family: 'Ubuntu Mono', monospace;
       display: table-cell;
       letter-spacing: 0.05em;
       padding: 20px 6px 5px 4px;
       font-size: 0.8rem;
-      min-height: 180px;
+      min-height: 170px;
       text-align: center; }
-      .experience-overlay-block .cv-list-small li:first-child {
-        min-height: 280px; }
-        @media screen and (min-width: 769px), print {
-          .experience-overlay-block .cv-list-small li:first-child {
-            min-height: 350px; } }
       .experience-overlay-block .cv-list-small li:last-child {
-        min-height: 240px;
-        position: relative; }
-        @media screen and (min-width: 769px), print {
-          .experience-overlay-block .cv-list-small li:last-child {
-            min-height: 320px; } }
-        @media screen and (min-width: 1088px) {
-          .experience-overlay-block .cv-list-small li:last-child {
-            min-height: 360px; } }
+        padding-bottom: 40px; }
       @media screen and (min-width: 769px), print {
         .experience-overlay-block .cv-list-small li {
           min-height: 220px;
-          padding: 4vh 1.4vh;
           font-size: 1rem; } }
       @media screen and (min-width: 1088px) {
         .experience-overlay-block .cv-list-small li {
-          padding: 4vh 2.7vh 4vh 2.4vh;
-          font-size: 1.2rem; } }
+          font-size: 1.2rem;
+          padding: 20px 6px 5px 4px;
+          min-height: 320px; } }
       .experience-overlay-block .cv-list-small li .yellow-circle {
         height: 16px;
         width: 16px;
