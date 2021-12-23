@@ -9,13 +9,17 @@ el.onclick = function() {
   el.classList.toggle('experience-overlay-block-toggled-active');
 }
 
-// Toggle CV bar via logo
+// Toggle CV sidebar via logo 'bars'
 let logo_bar = document.querySelector('.logo-bar');
 logo_bar.onclick = function() {
-  if(document.getElementsByClassName('experience-overlay-block-toggled-active').length) {
+  if(el.classList.contains('experience-overlay-block-toggled-active')) {
+    el.classList.remove('allow-hover');
+
+    el.classList.toggle('experience-overlay-block-toggled-active');
+
     setTimeout(function() {
-      el.classList.toggle('experience-overlay-block-toggled-active');
-    }, 200)
+      el.classList.add('allow-hover');
+    }, 300);
   }
   else {
     el.classList.toggle('experience-overlay-block-toggled-active');

@@ -325,7 +325,7 @@ body {
 }
 
 // Hover (and click on mobile/tablet) effects for cv bar
-.no-touch .experience-overlay-block:hover,
+.no-touch .experience-overlay-block.allow-hover:hover,
 .experience-overlay-block-toggled-active {
   width: 83.33vw;
 

@@ -5442,28 +5442,28 @@ body {
       margin-bottom: 1rem;
       letter-spacing: 0.05em; }
 
-.no-touch .experience-overlay-block:hover,
+.no-touch .experience-overlay-block.allow-hover:hover,
 .experience-overlay-block-toggled-active {
   width: 83.33vw;
   overflow: visible; }
   @media screen and (min-width: 769px), print {
-    .no-touch .experience-overlay-block:hover,
+    .no-touch .experience-overlay-block.allow-hover:hover,
     .experience-overlay-block-toggled-active {
       width: 46.6666vw; } }
   @media screen and (min-width: 1088px) {
-    .no-touch .experience-overlay-block:hover,
+    .no-touch .experience-overlay-block.allow-hover:hover,
     .experience-overlay-block-toggled-active {
       width: 43.75vw; } }
-  .no-touch .experience-overlay-block:hover .cv-list-small,
+  .no-touch .experience-overlay-block.allow-hover:hover .cv-list-small,
   .experience-overlay-block-toggled-active .cv-list-small {
     display: none; }
-  .no-touch .experience-overlay-block:hover .white-side-block,
-  .no-touch .experience-overlay-block:hover .cv-list-big,
+  .no-touch .experience-overlay-block.allow-hover:hover .white-side-block,
+  .no-touch .experience-overlay-block.allow-hover:hover .cv-list-big,
   .experience-overlay-block-toggled-active .white-side-block,
   .experience-overlay-block-toggled-active .cv-list-big {
     display: block; }
   @media screen and (max-width: 768px) {
-    .no-touch .experience-overlay-block:hover .close-overlay,
+    .no-touch .experience-overlay-block.allow-hover:hover .close-overlay,
     .experience-overlay-block-toggled-active .close-overlay {
       display: block; } }
 
