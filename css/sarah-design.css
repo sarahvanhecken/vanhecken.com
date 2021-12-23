@@ -5301,8 +5301,8 @@ body {
   z-index: 1000;
   overflow: hidden;
   cursor: pointer;
-  -webkit-transition: width 0.2s ease;
-  transition: width 0.2s ease;
+  -webkit-transition: width 0.25s ease-in-out;
+  transition: width 0.25s ease-in-out;
   -webkit-transform: translateZ(0) scale(1, 1); }
   @media screen and (min-width: 769px), print {
     .experience-overlay-block {
@@ -5316,7 +5316,7 @@ body {
     padding: 0;
     position: fixed;
     left: .5vw;
-    top: 190px; }
+    top: 210px; }
     @media screen and (min-width: 750px), print {
       .experience-overlay-block .cv-list-small {
         left: 2vw; } }
@@ -5410,11 +5410,11 @@ body {
     .cv-list-big {
       top: 13rem;
       left: 12.5vw;
-      width: 20.5vw; } }
+      width: 21.5vw; } }
   @media screen and (min-width: 1088px) {
     .cv-list-big {
       top: 17rem;
-      width: 17.5vw; } }
+      width: 22.5vw; } }
   .cv-list-big .h3,
   .cv-list-big .h4 {
     font-size: 0.8rem;
