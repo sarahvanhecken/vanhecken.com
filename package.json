@@ -1,0 +1,25 @@
+{
+  "name": "vanhecken.com",
+  "version": "1.0.0",
+  "description": "Portfolio site",
+  "main": "sass/sarah.scss",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/sarah.scss css/sarah.css",
+    "css-build-design": "node-sass --omit-source-map-url sass/sarah-design.scss css/sarah-design.css",
+    "css-watch": "npm run css-build -- --watch",
+    "css-watch-design": "npm run css-build-design -- --watch",
+    "start": "concurrently \"npm run css-watch\"  \"npm run css-watch-design\"  \"http-server -d -i\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "bulma": "^0.7.4",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
