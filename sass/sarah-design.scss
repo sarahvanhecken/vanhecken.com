@@ -1,0 +1,830 @@
+@charset "utf-8";
+
+// Set your brand colors
+$white: #ffffff;
+$black: #000000;
+$light-red: #AF3318;
+$orange-red: #EF7E16;
+$dark-red: #8F3926;
+$dark-red-two: #AC371D;
+$light-white: #F9F9F9;
+$dark-grey: #151516;
+$grey: #666;
+$green: #649572;
+$light-blue: #8FD8E9;
+$medium-blue: #257F93;
+$hover-blue: #8FD8E9;
+$medium-grey: #A7A098;
+$light-grey: #d2d3d6;
+$light-grey2: #E5E5E5;
+$light-grey3: #DED5CC;
+
+// Update Bulma's global variables
+$family-sans-serif: "Overpass", sans-serif;
+$body-size: 14px;
+$body-color: $white;
+$section-padding: 0;
+$section-padding-medium: 0;
+$section-padding-large: 0;
+
+// Update some of Bulma's component variables
+$body-background-color: $light-grey2;
+$input-border-color: transparent;
+$input-shadow: none;
+$column-gap: 0rem;
+$link: $black;
+
+// Selection
+::selection {
+  background: $dark-grey;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: $dark-grey;
+  /* Gecko Browsers */
+}
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/form.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+
+
+// Custom
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  background: transparent radial-gradient(at calc(var(--mouse-x, 0) * 100%) calc(var(--mouse-y, 0) * 100%), $hover-blue 10%, $light-grey2 40%) no-repeat 0 0
+}
+
+.h1 {
+  display: inline-block;
+  width: auto;
+  position: relative;
+  font-family: 'Overpass', sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 1.55em;
+  margin-left: calc(100vw / 12 * 2);
+  margin-bottom: 1.5rem;
+  color: $dark-grey;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+
+  @include tablet {
+    font-size: 2.2em;
+    height: 4.1116vw;
+    padding: 0;
+    margin-top: 4.2vw;
+    margin-left: 12.5vw;
+    line-height: 2.2rem;
+  }
+
+  @include desktop {
+    font-size: 2.4em;
+  }
+
+  @include fullhd {
+    font-size: 2.7em;
+  }
+
+  &:hover {
+    .logo-bar {
+      //width: 100%;
+    }
+  }
+}
+
+.h2 {
+  color: $dark-grey;
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 0.05em;
+  font-family: 'Ubuntu Mono', monospace;
+
+  @include tablet {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+
+  @include desktop {
+    font-size: 8.5rem;
+    line-height: 8.5rem;
+  }
+}
+
+.opacity-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.experience-overlay-block {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8.333vw;
+  z-index: 1000;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+  -webkit-transform: translateZ(0) scale(1, 1);
+
+  @include tablet {
+    width: 4.1666vw;
+  }
+
+  .cv-list-small {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    color: $dark-grey;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: .5vw;
+    top: 190px; 
+
+    @media screen and (min-width: 750px), print {
+      left: 2vw; 
+    }
+    @media screen and (min-width: 769px), print {
+      left: .5vw; 
+      top: 270px;
+    }
+    @media screen and (min-width: 1088px) {
+      left: .6vw; 
+      top: 310px;
+    }
+    @media screen and (min-width: 1480px) {
+      left: 1.16vw; 
+      top: 25vw;
+    }
+    @media screen and (min-width: 1680px) {
+      left: 1.16vw; 
+      top: 27vw;
+    }
+    
+    li {
+      font-family: 'Ubuntu Mono', monospace;
+      display: table-cell;
+      letter-spacing: 0.05em;
+      padding: 20px 6px 5px 4px;
+      font-size: 0.9rem;
+      min-height: 180px;
+      text-align: center;
+
+      &:first-child {
+        min-height: 280px;
+      }
+
+      &:last-child {
+        min-height: 240px;
+        position: relative;
+        @include tablet {
+          min-height: 320px;
+        }
+        @include desktop {
+          min-height: 360px;
+        }
+      }
+
+      @media screen and (min-width: 769px), print {
+        .experience-overlay-block .cv-list-small li {
+          font-size: 1rem; 
+          min-height: 220px;
+        } 
+      }
+      @media screen and (min-width: 1088px) {
+        .experience-overlay-block .cv-list-small li {
+          font-size: 1.2rem; 
+          padding: 20px 6px 5px 4px;
+          min-height: 320px;
+        } 
+      }
+
+      .yellow-circle {
+        height: 16px;
+        width: 16px;
+        background-color: $light-blue;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 14px;
+        position: absolute;
+        bottom: 2px;
+        left: 5px;
+
+        @include tablet {
+          position: static;
+          margin-top: 21px;
+          height: 20px;
+          width: 20px;
+        }
+
+        @include desktop {
+          height: 22px;
+          width: 22px;
+        }
+      }
+    }
+  }
+}
+
+.white-side-block {
+  display: none;
+  position: absolute;
+  top: 8.3333vw;
+  left: 55px;
+  width: 20px;
+  height: 80px;
+  background-color: $light-grey3;
+  z-index: 1001;
+
+  @include tablet {
+    top: 4.1666vw;
+  }
+}
+
+.cv-list-big {
+  display: none;
+  color: $white;
+  z-index: 1001;
+  position: absolute;
+  top: 84vw;
+  left: 16.6666vw;
+  width: 50vw;
+
+  @include tablet {
+    top: 13rem;
+    left: 12.5vw;
+    width: 20.5vw;
+  }
+
+  @include desktop {
+    top: 17rem;
+    width: 17.5vw;
+  }
+
+  .h3,
+  .h4 {
+    font-size: 0.8rem;
+    color: $medium-blue;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    text-align: left;
+    line-height: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .h3 {
+    color: $dark-grey;
+  }
+
+  .cv-list-item {
+    margin-bottom: 5rem;
+
+    .h4 {
+      font-size: 1.2rem;
+      font-family: 'Anonymous Pro', monospace;
+      margin-bottom: 1.6rem;
+      line-height: 1.6rem;
+      span {
+        color: $medium-grey;
+      }
+    }
+
+    p {
+      color: $dark-grey;
+      font-family: 'Anonymous Pro', monospace;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+// Hover (and click on mobile/tablet) effects for cv bar
+.no-touch .experience-overlay-block:hover,
+.experience-overlay-block-toggled-active {
+  width: 83.33vw;
+
+  @include tablet {
+    width: 46.6666vw;
+  }
+
+  @include desktop {
+    width: 43.75vw;
+  }
+
+  overflow: visible;
+
+  .cv-list-small {
+    display: none;
+  }
+
+  .white-side-block,
+  .cv-list-big {
+    display: block;
+  }
+
+  .close-overlay {
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.no-touch .experience-overlay-block:hover+header .h1,
+.experience-overlay-block-toggled-active+header .h1 {
+  z-index: 1001;
+  background: transparent !important;
+  width: auto;
+  color: $dark-grey;
+}
+
+.no-touch .experience-overlay-block:hover+header .logo-bar p,
+.experience-overlay-block-toggled-active+header .logo-bar p {
+  border-color: $dark-grey;
+}
+
+.no-touch .experience-overlay-block:hover+header .opacity-overlay,
+.experience-overlay-block-toggled-active+header .opacity-overlay {
+  display: block;
+}
+
+
+.header {
+  display: block;
+  margin-bottom: 3rem;
+
+  @include tablet {
+    margin-bottom: 9rem;
+  }
+  @include desktop {
+    margin-bottom: 11rem;
+  }
+}
+
+.header .column.grey-bg {
+  @include tablet {
+    order: 2;
+  }
+}
+
+.header .column.green-bg {
+  background-color: $light-red;
+  padding-top: 8.333vw;
+
+  @include tablet {
+    padding-top: 0;
+    order: 1;
+  }
+}
+
+.header .logo-bar {
+  width: 100%;
+  margin-top: 2.5rem;
+  // position: absolute;
+  // bottom: -10px;
+  // left: 0;
+  cursor: pointer;
+
+  p {
+    width: 100%;
+    border-bottom: 2px solid $dark-grey;
+    height: 6px;
+    @include clearfix;
+  }
+
+  @include tablet {
+    height: 14px;
+  }
+
+  @include desktop {
+    bottom: 0;
+    font-size: 2.8em;
+  }
+}
+
+
+.get-in-touch {
+  color: $dark-grey;
+  display: block;
+  padding: 1.8rem 0 2rem 0;
+  padding-left: 16.25vw;
+  padding-right: 8.125vw;
+
+  @include mobile {
+    min-height: 118px;
+  }
+
+  @include tablet {
+    padding: 0;
+    position: absolute;
+    top: 4.2vw;
+    right: 8.433vw;
+  }
+
+  @include desktop {
+    position: absolute;
+    top: 4.2vw;
+    right: 8.333vw;
+  }
+}
+
+.get-in-touch h4 {
+  font-family: 'Overpass', sans-serif;
+  color: $dark-grey;
+  font-size: 0.8rem;
+
+  @include mobile {
+    margin-top: 4px;
+    width: 100px;
+    float: left;
+    text-align: left;
+  }
+
+  @include tablet {
+    text-align: right;
+    font-size: 0.9rem;
+  }
+}
+
+.get-in-touch ul {
+  @include mobile {
+    float: right;
+    padding-bottom: 2rem;
+  }
+}
+
+.get-in-touch ul li {
+  display: block;
+  text-align: right;
+  margin-bottom: 0.7rem;
+
+  @include tablet {
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    margin-top: 0.8rem;
+  }
+
+  a {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid $dark-grey;
+    padding-bottom: 3px;
+    color: $dark-grey;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      color: $orange-red;
+      border-bottom: 2px solid $orange-red;
+    }
+  }
+}
+
+
+// SUBHEADER
+.bigtext {
+  margin-left: 16.25vw;
+  margin-right: 8.125vw;
+  margin-bottom: 4rem;
+
+  @include tablet {
+    margin-left: 12.29vw;
+  }
+
+  h2.subtitel {
+    color: $dark-grey;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    margin-bottom: 1.5rem;
+
+    @include tablet {
+      font-size: 2.7rem;
+      line-height: 3.1rem;
+      max-width: 60vw;
+      margin-bottom: 0rem;
+    }
+    @include desktop {
+      font-size: 3.0rem;
+      line-height: 3.6rem;
+    }
+
+    a {
+      padding-bottom: 2px;
+      border-bottom: 2px solid $dark-grey;
+    }
+  }
+}
+
+.subsub {
+  font-size: 0.6rem;
+  margin: 0.6rem 0 0 0.3rem;
+}
+
+
+// Portfolio
+.portfolio {
+  margin-left: 16.25vw;
+  margin-right: 8.125vw;
+  margin-bottom: 4rem;
+
+  @include tablet {
+    margin-left: 12.29vw;
+    margin-right: 0;
+    width: 60vw;
+
+    .first-column {
+      margin-right: 1rem;
+    }
+  }
+  .columns {
+    .none {
+      pointer-events: none;
+    }
+    a {
+      display: block;
+      position: relative;
+      height: auto;
+      margin-bottom: 1rem;
+      padding: 0;
+
+      img {
+        display: block; 
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      &:after, &:before {
+        position: absolute;
+        opacity: 0;
+        transition: all 0.3s;
+        -webkit-transition: all 0.3s;
+      }
+      &:after {
+        content:'\A';
+        width: 100%; 
+        height: 100%;
+        padding: 0;
+        overflow: hidden;
+        top: 0; 
+        left: 0;
+        background :rgba(0,0,0,0.6);
+      } 
+      &:before {
+        content: attr(data-content);
+        width: 100%;
+        color: #fff;
+        z-index: 1;
+        padding: 0;
+        font-family: 'Ubuntu Mono', monospace;
+        font-size: 1.3rem;
+        top: 47%;
+        text-align: center;
+      }
+      &:hover:after, &:hover:before {
+        opacity:1;
+      }
+    }
+  }
+}
+
+
+// FOOTER
+.footer {
+  margin: 10rem 0 0 0;
+}
+
+.footer .column.grey-bg {
+  color: $medium-grey;
+  padding: 2rem 3rem;
+  padding-left: 16.25vw;
+
+  @include tablet {
+    padding: 4rem;
+  }
+
+  p {
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+  }
+}
+
+.footer .column.green-bg {
+  color: $dark-grey;
+  padding: 3rem 0 3rem 0;
+  padding-left: 16.25vw;
+
+  @include tablet {
+    padding: 5rem 0 3rem 0;
+    padding-left: 12.29vw;
+  }
+
+  @include desktop {
+    padding-bottom: 4rem;
+  }
+
+  li {
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      float: left;
+    }
+
+    h4 {
+      padding-top: 5px;
+      font-size: 0.9rem;
+      color: $dark-grey;
+    }
+
+    a {
+      color: $dark-grey;
+      font-family: 'Ubuntu Mono', monospace;
+      border-bottom: 2px solid $black;
+      padding-bottom: 2px;
+
+      &:hover {
+        border-bottom: 2px solid $orange-red;
+      }
+    }
+  }
+}
+
+.footer .h4 {
+  text-align: left;
+}
+
+
+// Effects
+.fade-in {
+  animation: fadeIn ease 500ms;
+  -webkit-animation: fadeIn ease 500ms;
+  -moz-animation: fadeIn ease 500ms;
+  -o-animation: fadeIn ease 500ms;
+  -ms-animation: fadeIn ease 500ms;
+}
+
+.load-page-text-fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+
+  -webkit-animation: fadeIn ease-in 700ms;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 700ms;
+  animation: fadeIn ease-in 700ms;
+
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 700ms;
+  -moz-animation-duration: 700ms;
+  animation-duration: 700ms;
+
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// Blinking
+.blinking-circle {
+  animation: blinkingCircle ease-in 5s infinite;
+}
+
+@keyframes blinkingCircle {
+  0% {
+    opacity: 0;
+  }
+
+  49% {
+    opacity: 0.99;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  51% {
+    opacity: 0.99;
+  }
+
+  99% {
+    opacity: 0.01;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+// Close
+.close-overlay {
+  display: none;
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.close-overlay:before,
+.close-overlay:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 26px;
+  width: 2px;
+  background-color: $medium-grey;
+}
+
+.close-overlay:before {
+  transform: rotate(45deg);
+}
+
+.close-overlay:after {
+  transform: rotate(-45deg);
+}

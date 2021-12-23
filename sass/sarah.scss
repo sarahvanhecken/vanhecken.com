@@ -1,0 +1,1057 @@
+@charset "utf-8";
+
+// Set your brand colors
+$white: #ffffff;
+$black: #000000;
+$light-red: #AF3318;
+$orange-red: #EF7E16;
+$dark-red: #8F3926;
+$dark-red-two: #AC371D;
+$light-white: #F9F9F9;
+$dark-grey: #151516;
+$grey: #666;
+$green: #649572;
+$light-blue: #8FD8E9;
+$light-grey: #d2d3d6;
+$light-grey2: #E5E5E5;
+
+// Update Bulma's global variables
+$family-sans-serif: "Overpass",
+sans-serif;
+$body-size: 14px;
+$body-color: $white;
+$section-padding: 0;
+$section-padding-medium: 0;
+$section-padding-large: 0;
+
+// Update some of Bulma's component variables
+$body-background-color: $dark-red;
+$input-border-color: transparent;
+$input-shadow: none;
+$column-gap: 0rem;
+$link: $black;
+
+// Selection
+::selection {
+  background: $dark-grey;
+  /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: $dark-grey;
+  /* Gecko Browsers */
+}
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+@import "../node_modules/bulma/sass/grid/_all.sass";
+@import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/container.sass";
+@import "../node_modules/bulma/sass/elements/form.sass";
+@import "../node_modules/bulma/sass/elements/title.sass";
+@import "../node_modules/bulma/sass/components/navbar.sass";
+@import "../node_modules/bulma/sass/layout/hero.sass";
+@import "../node_modules/bulma/sass/layout/section.sass";
+
+
+// Custom
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  width: 100%;
+}
+
+.h1 {
+  display: block;
+  position: relative;
+  font-family: 'Overpass', sans-serif;
+  letter-spacing: 0.05em;
+  font-size: 1.4em;
+  font-weight: bold;
+  height: 16.666vw;
+  background-color: $light-red;
+  margin-left: calc(100vw / 12 * 2);
+  color: $dark-grey;
+  line-height: 1.5rem;
+
+  @include tablet {
+    font-size: 2.2em;
+    height: 4.1116vw;
+    padding: 0;
+    margin-top: 4.2vw;
+    margin-left: 12.5vw;
+    line-height: 2.2rem;
+  }
+
+  @include desktop {
+    font-size: 2.4em;
+  }
+
+  @include fullhd {
+    font-size: 2.7em;
+  }
+
+  &:hover {
+    .logo-bar {
+      //width: 100%;
+    }
+  }
+}
+
+.h2 {
+  color: $white;
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 0.05em;
+  font-family: 'Overpass', sans-serif;
+
+  @include tablet {
+    font-size: 7rem;
+    line-height: 7rem;
+  }
+
+  @include desktop {
+    font-size: 8.5rem;
+    line-height: 8.5rem;
+  }
+}
+
+.h3 {
+  color: $white;
+  font-size: 2.6rem;
+  line-height: 2.6rem;
+  letter-spacing: 0.05em;
+  font-family: 'Overpass', sans-serif;
+}
+
+.h4 {
+  color: $white;
+  font-family: 'Overpass', sans-serif;
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  text-align: right;
+  letter-spacing: 0.05em;
+}
+
+.opacity-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.experience-overlay-block {
+  background-color: $dark-grey;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8.333vw;
+  z-index: 1000;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+  -webkit-transform: translateZ(0) scale(1, 1);
+
+  @include tablet {
+    width: 4.1666vw;
+  }
+
+  .cv-list-small {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    color: $white;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: .5vw;
+    top: 165px; 
+
+    @media screen and (min-width: 750px), print {
+      left: 2.2vw; 
+      top: 200px;
+    }
+    @media screen and (min-width: 769px), print {
+      left: .5vw; 
+      top: 240px;
+    }
+    @media screen and (min-width: 1088px) {
+      left: .75vw; 
+      top: 310px;
+    }
+    @media screen and (min-width: 1480px) {
+      left: 1.1vw; 
+      top: 430px;
+    }
+
+    li {
+      font-family: 'Ubuntu Mono', monospace;
+      display: table-cell;
+      letter-spacing: 0.05em;
+      padding: 20px 6px 5px 4px;
+      font-size: 0.8rem;
+      min-height: 170px;
+      text-align: center;
+
+      &:last-child {
+        padding-bottom: 40px;
+      }
+
+      @media screen and (min-width: 769px), print {
+        min-height: 220px;
+        font-size: 1rem;
+      }
+
+        @media screen and (min-width: 1088px) {
+        font-size: 1.2rem; 
+        padding: 20px 6px 5px 4px;
+        min-height: 320px;
+      }
+
+      .yellow-circle {
+        height: 16px;
+        width: 16px;
+        background-color: $light-blue;
+        border-radius: 50%;
+        display: inline-block;
+        margin-top: 14px;
+        position: absolute;
+        bottom: 2px;
+        left: 5px;
+
+        @include tablet {
+          position: static;
+          margin-top: 21px;
+          height: 20px;
+          width: 20px;
+        }
+
+        @include desktop {
+          height: 22px;
+          width: 22px;
+        }
+      }
+    }
+  }
+}
+
+.white-side-block {
+  display: none;
+  position: absolute;
+  top: 8.3333vw;
+  left: 55px;
+  width: 20px;
+  height: 80px;
+  background-color: $orange-red;
+  z-index: 1001;
+
+  @include tablet {
+    top: 4.1666vw;
+  }
+}
+
+.cv-list-big {
+  display: none;
+  color: $white;
+  z-index: 1001;
+  position: absolute;
+  top: 84vw;
+  left: 16.6666vw;
+  width: 50vw;
+
+  @include tablet {
+    top: 13rem;
+    left: 12.5vw;
+    width: 20.5vw;
+  }
+
+  @include desktop {
+    top: 17rem;
+    width: 17.5vw;
+  }
+
+  .h3,
+  .h4 {
+    font-size: 0.8rem;
+    color: $light-blue;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    text-align: left;
+    line-height: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  .h3 {
+    color: $white;
+  }
+
+  .cv-list-item {
+    margin-bottom: 5rem;
+
+    .h4 {
+      font-size: 1.2rem;
+      font-family: 'Ubuntu Mono', monospace;
+      margin-bottom: 1.6rem;
+      line-height: 1.6rem;
+    }
+
+    p {
+      color: #777;
+      font-family: 'Ubuntu Mono', monospace;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      letter-spacing: 0.05em;
+    }
+  }
+}
+
+// Hover (and click on mobile/tablet) effects for cv bar
+.no-touch .experience-overlay-block:hover,
+.experience-overlay-block-toggled-active {
+  width: 83.33vw;
+
+  @include tablet {
+    width: 41.6666vw;
+  }
+
+  @include desktop {
+    width: 37.5vw;
+  }
+
+  overflow: visible;
+
+  .cv-list-small {
+    display: none;
+  }
+
+  .white-side-block,
+  .cv-list-big {
+    display: block;
+  }
+
+  .close-overlay {
+    @include mobile {
+      display: block;
+    }
+  }
+}
+
+.no-touch .experience-overlay-block:hover+header .h1,
+.experience-overlay-block-toggled-active+header .h1 {
+  z-index: 1001;
+  background: transparent !important;
+  width: auto;
+  color: $white;
+}
+
+.no-touch .experience-overlay-block:hover+header .logo-bar p,
+.experience-overlay-block-toggled-active+header .logo-bar p {
+  border-color: $dark-red-two;
+}
+
+.no-touch .experience-overlay-block:hover+header .opacity-overlay,
+.experience-overlay-block-toggled-active+header .opacity-overlay {
+  display: block;
+}
+
+// HEADER
+.header .column {
+  min-height: 66.666vw;
+
+  @include tablet {
+    min-height: 37.5vw;
+  }
+
+  @include desktop {
+    min-height: 25vw;
+  }
+}
+
+.header .column.is-5 {
+  min-height: 0;
+
+  @include tablet {
+    min-height: 37.5vw;
+  }
+}
+
+// .header .column {
+//   background-size: 8.3333vw 8.3333vw;
+//   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent 1px),
+//     linear-gradient(to bottom, rgba(0, 0, 0, 0.1), transparent 1px);
+//   @include tablet {
+//     background-size: 4.1666vw 4.1666vw;
+//   }
+// }
+.header .column.grey-bg {
+  @include mobile {
+    margin-bottom: 1rem;
+  }
+  @include tablet {
+    order: 2;
+    margin-bottom: 0rem;
+  }
+}
+
+.header .column.green-bg {
+  background-color: $light-red;
+  padding-top: 8.333vw;
+
+  @include tablet {
+    padding-top: 0;
+    order: 1;
+  }
+}
+
+.header .logo-bar {
+  width: 20.8333vw;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  cursor: pointer;
+
+  p {
+    width: 100%;
+    border-bottom: 2px solid $orange-red;
+    height: 6px;
+    @include clearfix;
+  }
+
+  @include tablet {
+    width: 16.66vw;
+    height: 14px;
+    bottom: -14px;
+  }
+
+  @include desktop {
+    width: 160px;
+    bottom: 0;
+    font-size: 2.8em;
+  }
+}
+
+.get-in-touch {
+  background-color: $dark-red;
+  color: $white;
+  display: block;
+  padding: 1.8rem 0 2rem 0;
+  padding-left: 16.25vw;
+  padding-right: calc(100vw / 24 * 3.95);
+
+  @include mobile {
+    min-height: 118px;
+  }
+
+  @include tablet {
+    padding: 0;
+    width: calc(100vw / 24 * 2.98);
+    height: calc(100vw / 24 * 1.99);
+    position: absolute;
+    top: 4.2vw;
+    right: 8.433vw;
+  }
+
+  @include desktop {
+    width: 8.29vw;
+    height: 8.29vw;
+    position: absolute;
+    top: 4.2vw;
+    right: 8.333vw;
+  }
+}
+
+.get-in-touch h4 {
+  color: $white;
+  font-size: 0.7rem;
+
+  @include mobile {
+    margin-top: 4px;
+    width: 100px;
+    float: left;
+    text-align: left;
+  }
+
+  @include tablet {
+    font-size: 0.8rem;
+  }
+}
+
+.get-in-touch ul {
+  @include mobile {
+    float: right;
+    padding-bottom: 2rem;
+  }
+}
+
+.get-in-touch ul li {
+  display: block;
+  text-align: right;
+  margin-bottom: 0.5rem;
+
+  @include tablet {
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+  }
+
+  @include desktop {
+    margin-top: 1.1rem;
+  }
+
+
+  a {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid $white;
+    padding-bottom: 1px;
+    color: $white;
+
+    @include tablet {
+      font-size: 1rem;
+    }
+
+    &:hover {
+      color: $orange-red;
+      border-bottom: 2px solid $orange-red;
+    }
+  }
+}
+
+// SUBHEADER
+.subheader {
+  margin-left: 16.25vw;
+
+  @include tablet {
+    margin-left: 12.29vw;
+  }
+}
+
+.subheader h2.subtitel {
+  margin-top: -5.2rem;
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+  margin-right: 2rem;
+  margin-bottom: 8rem;
+
+  @include tablet {
+    font-size: 6rem;
+    margin-top: -10rem;
+    margin-right: 0;
+    margin-bottom: 2rem;
+    line-height: 6.5rem;
+  }
+
+  @include desktop {
+    margin-top: -14rem;
+    font-size: 8.5rem;
+    line-height: 8.5rem;
+  }
+}
+
+.subsub {
+  font-size: 0.6rem;
+  margin: 0.6rem 0 0 0.3rem;
+}
+
+.subheader .experience-block {
+  margin-top: -12.5vw;
+
+  .content {
+    border-bottom: 20px solid $dark-grey;
+    padding: 3rem 8.3333vw 3rem 0;
+    background-color: $light-blue;
+
+    h4 {
+      color: $dark-grey;
+      font-size: 0.7rem;
+
+      @include tablet {
+        font-size: 0.8rem;
+      }
+    }
+
+    font-size: 0.8rem;
+
+    @include tablet {
+      font-size: 0.9rem;
+      padding: 6rem 8.3333vw 6rem 0;
+    }
+
+    ul {
+      margin-top: 0.8rem;
+    }
+
+    ul li {
+      display: block;
+      text-align: right;
+      margin-top: 0.3rem;
+      font-family: 'Ubuntu Mono';
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      color: $dark-grey;
+    }
+  }
+}
+
+// ABOUT
+.about .columns>.columns .is-7:first-child {
+  padding-right: 2rem;
+}
+
+.about .columns.is-mobile .columns .column:first-child {
+  margin-bottom: 2rem;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
+}
+
+.binary {
+  margin: 6rem 0;
+  margin-left: 16.25vw;
+  margin-right: 12.29vw;
+  line-height: 1.8rem;
+  color: $white;
+  font-family: 'Ubuntu Mono', monospace;
+  letter-spacing: 0.07em;
+
+  @include tablet {
+    margin: 10rem 0;
+    margin-left: 12.29vw;
+    margin-right: 0;
+    max-width: 37%;
+    margin-right: 0;
+  }
+
+  div {
+    font-size: 12px;
+    min-width: 70px;
+    float: left;
+    color: $white;
+    display: inline-block;
+  }
+}
+
+.about {
+  margin-left: 16.25vw;
+  margin-right: 12.29vw;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  letter-spacing: 0.05em;
+  line-height: 1.8rem;
+
+  @include tablet {
+    margin-left: 12.29vw;
+    margin-right: 0;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+  }
+}
+
+.about .columns .column p {
+  margin-bottom: 1rem;
+}
+
+.about .columns .column:first-child {
+  @include mobile {
+    margin-bottom: 2rem;
+  }
+}
+
+.about h2 {
+  color: $light-blue;
+  font-size: 3.8rem;
+  line-height: 84px;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+
+  @include tablet {
+    font-size: 5.2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.about .sarah-photo {
+  @include tablet {
+    margin-top: -8rem;
+  }
+
+  img {
+    opacity: 0.8;
+  }
+}
+
+// PROJECTS
+.projects {
+  margin-left: 16.25vw;
+  margin-right: 12.29vw;
+  margin-bottom: 7rem;
+
+  @include tablet {
+    margin-left: 12.29vw;
+    margin-right: 0;
+    margin-bottom: 14rem;
+  }
+}
+
+.projects h2 {
+  color: $light-blue;
+  font-size: 3.8rem;
+  line-height: 84px;
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5rem;
+
+  @include tablet {
+    font-size: 5.2rem;
+    margin-bottom: 5.5rem;
+  }
+}
+
+// MORE
+.more {
+  margin-left: 16.25vw;
+  margin-right: 12.29vw;
+
+  @include tablet {
+    margin-left: 12.29vw;
+    margin-right: 0;
+  }
+}
+
+.more h2 {
+  font-size: 4.1rem;
+  line-height: 84px;
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5rem;
+  color: $light-blue;
+
+  @include tablet {
+    font-size: 5.2rem;
+    margin-bottom: 4rem;
+  }
+}
+
+// MEDIA ITEMS
+.media-item {
+  margin-bottom: 3rem;
+
+  @include tablet {
+    padding-right: 7rem;
+  }
+
+  @include desktop {
+    padding-right: 20rem;
+  }
+}
+
+.media-item-bar {
+  width: 80px;
+  height: 100%;
+
+  @include tablet {
+    float: left;
+    margin-right: 30px;
+  }
+
+  li {
+    width: 7px;
+    display: inline;
+    height: 100%;
+    border-right: 2px solid $orange-red;
+    float: left;
+  }
+}
+
+.media-item h3 {
+  margin-bottom: 2.5rem;
+  margin-top: 0px;
+}
+
+.media-item .h4 {
+  font-size: 1rem;
+  font-family: 'Ubuntu Mono', monospace;
+  letter-spacing: 0.05em;
+  margin-bottom: 2.5rem;
+  margin-top: 0px;
+  text-align: left;
+}
+
+.media-item-content {
+  letter-spacing: 0.05em;
+
+  p {
+    margin-bottom: 2.5rem;
+  }
+
+  a {
+    color: $white;
+    font-family: 'Ubuntu Mono', monospace;
+    text-decoration: underline;
+    letter-spacing: 0.05em;
+    text-underline-position: under;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 2px;
+
+    &:after {
+      transition: 200ms ease;
+      transition-property: transform;
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      width: 16px;
+      height: 12px;
+      margin-left: 12px;
+      background: transparent url('../assets/images/arrow.png') no-repeat;
+      background-size: 16px 12px;
+      background-position: left bottom;
+    }
+
+    &:hover {
+      &:after {
+        transform: translateX(3px);
+      }
+    }
+  }
+
+  @include tablet {
+    @include clearfix;
+    float: right;
+    width: calc(100% - 110px);
+  }
+}
+
+.media-item-mobile-bar {
+  width: 100%;
+  margin-top: 2.2rem;
+
+  p {
+    width: 100%;
+    border-bottom: 2px solid $orange-red;
+    height: 6px;
+    @include clearfix;
+  }
+}
+
+// FOOTER
+.footer {
+  margin: 10rem 0 0 0;
+}
+
+.footer .column.grey-bg {
+  color: $white;
+  padding: 2rem 3rem;
+  padding-left: 16.25vw;
+
+  @include tablet {
+    padding: 4rem;
+  }
+
+  p {
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+
+    a {
+      text-decoration: underline;
+      color: $white;
+    }
+  }
+}
+
+.footer .column.green-bg {
+  background-color: $light-blue;
+  padding: 3rem 0 3rem 0;
+  padding-left: 16.25vw;
+
+  @include tablet {
+    padding: 5rem 0 3rem 0;
+    padding-left: 12.29vw;
+  }
+
+  @include desktop {
+    padding-bottom: 4rem;
+  }
+
+  li {
+    margin-right: 4rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      float: left;
+    }
+
+    h4 {
+      padding-top: 5px;
+      font-size: 0.9rem;
+      color: $dark-grey;
+    }
+
+    a {
+      color: $dark-grey;
+      font-family: 'Ubuntu Mono', monospace;
+      border-bottom: 2px solid $black;
+      padding-bottom: 2px;
+
+      &:hover {
+        border-bottom: 2px solid $orange-red;
+      }
+    }
+  }
+}
+
+.footer .h4 {
+  text-align: left;
+}
+
+
+// Effects
+.fade-in {
+  animation: fadeIn ease 500ms;
+  -webkit-animation: fadeIn ease 500ms;
+  -moz-animation: fadeIn ease 500ms;
+  -o-animation: fadeIn ease 500ms;
+  -ms-animation: fadeIn ease 500ms;
+}
+
+.load-page-text-fade-in {
+  opacity: 0;
+  /* make things invisible upon start */
+
+  -webkit-animation: fadeIn ease-in 700ms;
+  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation: fadeIn ease-in 700ms;
+  animation: fadeIn ease-in 700ms;
+
+  -webkit-animation-fill-mode: forwards;
+  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 700ms;
+  -moz-animation-duration: 700ms;
+  animation-duration: 700ms;
+
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// Blinking
+.blinking-circle {
+  animation: blinkingCircle ease-in 5s infinite;
+}
+
+@keyframes blinkingCircle {
+  0% {
+    opacity: 0;
+  }
+
+  49% {
+    opacity: 0.99;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  51% {
+    opacity: 0.99;
+  }
+
+  99% {
+    opacity: 0.01;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+// Close
+.close-overlay {
+  display: none;
+  position: absolute;
+  right: 22px;
+  top: 22px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.close-overlay:before,
+.close-overlay:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 26px;
+  width: 2px;
+  background-color: $light-grey;
+}
+
+.close-overlay:before {
+  transform: rotate(45deg);
+}
+
+.close-overlay:after {
+  transform: rotate(-45deg);
+}
