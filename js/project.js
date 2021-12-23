@@ -12,7 +12,9 @@ el.onclick = function() {
 // Toggle CV bar via logo
 let logo_bar = document.querySelector('.logo-bar');
 logo_bar.onclick = function() {
-  el.classList.toggle('experience-overlay-block-toggled-active');
+  setTimeout(function() {
+    el.classList.toggle('experience-overlay-block-toggled-active');
+  }, 200)
 }
 
 // Send mail link
